@@ -1,6 +1,6 @@
 package io.github.zbx_api
 
-import scala.util.parsing.json.JSON
+import com.fasterxml.jackson.databind.JsonNode
 
 trait ZabbixAPI {
 
@@ -10,6 +10,6 @@ trait ZabbixAPI {
 
   def login(user: String, password: String)
 
-  def call(request: Request): JSON
+  def call(request: Request): JsonNode
 
 }
